@@ -2,7 +2,7 @@ void setup()
 {
   size(1020, 720, P3D);
   camera(0, 0, -(height/2.0) / tan(PI*30.0 / 180.0), 0, 0, 0, 0, -1, 0);
- background(255);
+ background(0);
 }
 
 void draw()
@@ -11,7 +11,9 @@ void draw()
   float gaussian = randomGaussian();
   float y = random(-720, 721);
   
+  // spreads the circles
   float standardDeviation = 150;
+  // changes the spawn to a different place
   float mean = 0;
   
   float x = standardDeviation * gaussian + mean;
@@ -39,7 +41,7 @@ void draw()
   if(frameCount%300 == 0)
   {
     clear();
-    background(255);
+    background(0);
   }
   println(frameCount); 
 }
