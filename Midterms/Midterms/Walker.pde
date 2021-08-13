@@ -17,8 +17,6 @@ public class Walker
   float mean = 0;
   
   walkerPosition.x = standardDeviation * gaussian + mean;
-
-
   }
   
   public void renderWalkerCircle()
